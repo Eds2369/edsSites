@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* list-style-type: none; */
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(19,34,87);
+    --secondary-color: rgb(61, 183, 228);
+}
+
+html {
+    scroll-padding: 80px 0 0 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 16px;
+    height: 100%;
+}
+
+h2 {
+    font-size: 36px;
+    padding: 20px 0;
+}
+
+p {
+    line-height: 1.5;
+    /* margin: 10px 0 10px; */
+}
+
+.services, .templates, .custom, .about {
+    margin-top: 30px;
+}
+
+header {
+    color: black;
+    display: block;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+}
+
+header a {
+    color: white;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.wrapper {
+    color: var(--primary-color);
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    /* overflow: hidden; */
+    /* outline: 1px solid red; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    /* width: 200px;
+    height: 50px; */
+    /* background-color: royalblue; */
+    max-width: 180px;
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    padding: 5px 10px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.nav-links .nav-list {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style-type: none;
+} 
+
+.mobile-close-btn {
+    display: none;
+}
+
+.cta {
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 0;
+}
+
+.mobile-nav-btn {
+    display: none;
+}
+
+
+main {
+    padding-top: 120px;
+}
+
+.image-text-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.image-text h1 {
+    margin-bottom: 10px;
+}
+
+.image-text p {
+    line-height: 1.5;
+}
+
+.design-image {
+    max-width: 500px;
+}
+
+.design-image img {
+    width: 100%;
+}
+
+.custom-design-process {
+    margin: 78px 0 78px 0;
+}
+
+.custom-design-process ol {
+    margin-left: 16px;
+}
+
+.custom-design-process ol li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 14px 0;
+}
+
+.footer-text {
+    text-align: center;
+    color: white;
+}
+
+
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .nav-links {
+        width: 45%;
+        height: 100%;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        gap: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateX(500px);
+        transition: transform 0.5s ease-in-out;
+        z-index: 10;
+        justify-content: start;
+        padding: 20px;
+    }
+
+    .nav-links.show {
+        transform: translateX(0px);
+    }
+
+    .nav-links .nav-list {
+        margin: 0;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .mobile-nav-btn {
+        display: block;
+        font-size: 36px;
+        color: white;
+    }
+
+    .mobile-close-btn {
+        display: block;
+        font-size: 36px;
+    }
+
+    .cta {
+        width: max-content;
+        background-color: var(--primary-color);
+    }
+}
+
+@media (max-width: 900px) {
+    .image-text-container {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    /* .services-card-container {
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+    }
+
+    .services-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .custom-container {
+        flex-direction: column;
+    }
+
+    .custom-container .custom-info, .custom-container .custom-img {
+        width: 100%;
+    }
+
+    .custom-container .custom-info {
+        margin-bottom: 24px;
+    }
+
+    .work-container {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card {
+        height: 400px;
+    } */
+}
+
+@media (max-width: 540px) {
+    .nav-links {
+        width: 50%;
+    }
+
+    /* .design-image {
+        width: 300px;
+    } */
+}
